@@ -24,31 +24,30 @@ class RegistrationPage(Page):
         self.input("Test", *self.COMPANY)
 
     def verify_information(self):
-        self.wait_for_element_appear(*self.FULL_NAME)
-        self.wait_for_element_appear(*self.PHONE)
-        self.wait_for_element_appear(*self.EMAIL)
-        self.wait_for_element_appear(*self.PASSWORD)
-        self.wait_for_element_appear(*self.COMPANY)
+        expected_name_text = "joe"
+        actual_name_element = self.find_element(*self.FULL_NAME)
+        actual_name_value = actual_name_element.get_attribute("value")
+        assert expected_name_text == actual_name_value, f'Expected {expected_name_text} is not present in actual {actual_name_value}'
 
-        # expected_name_text = "joe"
-        # actual_name_text = self.find_element(*self.FULL_NAME)
-        # assert expected_name_text in actual_name_text, f'Expected {expected_name_text} is not present in actual {actual_name_text}'
+        expected_phone_text = "3475553458"
+        actual_phone_element = self.find_element(*self.PHONE)
+        actual_phone_value = actual_phone_element.get_attribute("value")
+        assert expected_phone_text in actual_phone_value, f'Expected {expected_phone_text} is not present in actual {actual_phone_value}'
 
-        # expected_phone_text = "3475553458"
-        # actual_phone_text = self.find_element(*self.PHONE).text
-        # assert expected_phone_text in actual_phone_text, f'Expected {expected_phone_text} is not present in actual {actual_phone_text}'
-        #
-        # expected_email_text = "Rabbit@gmail.com"
-        # actual_email_text = self.find_element(*self.EMAIL).text
-        # assert expected_email_text in actual_email_text, f'Expected {expected_email_text} is not present in actual {actual_email_text}'
-        #
-        # expected_password_text = "Trunks88"
-        # actual_password_text = self.find_element(*self.PASSWORD).text
-        # assert expected_password_text in actual_password_text, f'Expected {expected_password_text} is not present in actual {actual_password_text}'
-        #
-        # expected_company_text = "Test"
-        # actual_company_text = self.find_element(*self.COMPANY).text
-        # assert expected_company_text in actual_company_text, f'Expected {expected_company_text} is not present in actual {actual_company_text}'
+        expected_email_text = "Rabbit@gmail.com"
+        actual_email_element = self.find_element(*self.EMAIL)
+        actual_email_value = actual_email_element.get_attribute("value")
+        assert expected_email_text in actual_email_value, f'Expected {expected_email_text} is not present in actual {actual_email_value}'
+
+        expected_password_text = "Trunks88"
+        actual_password_element = self.find_element(*self.PASSWORD)
+        actual_password_value = actual_password_element.get_attribute("value")
+        assert expected_password_text in actual_password_value, f'Expected {expected_password_text} is not present in actual {actual_password_value}'
+
+        expected_company_text = "Test"
+        actual_company_element = self.find_element(*self.COMPANY)
+        actual_company_value = actual_company_element.get_attribute("value")
+        assert expected_company_text in actual_company_value, f'Expected {expected_company_text} is not present in actual {actual_company_value}'
 
 
 
