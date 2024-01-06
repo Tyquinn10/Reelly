@@ -1,0 +1,6 @@
+2024-01-05 22:43:13,289 - support.logger - INFO - Opening url https://soft.reelly.io/sign-up
+2024-01-05 22:43:14,115 - support.logger - INFO - Searching for element ('css selector', '#Full-Name')
+2024-01-05 22:43:14,231 - support.logger - INFO - Searching for element ('css selector', '#phone2')
+2024-01-05 22:43:14,250 - support.logger - INFO - Searching for element ('css selector', '#Email-3')
+2024-01-05 22:43:14,268 - support.logger - INFO - Searching for element ('css selector', '#field')
+2024-01-05 22:43:14,285 - support.logger - INFO - Searching for element ('css selector', '#Company-website')

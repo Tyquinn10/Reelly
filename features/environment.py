@@ -28,19 +28,19 @@ def browser_init(context, scenario_name):
     #     service=service
     # )
 
-    bs_user = 'keithsmith_8yvEsH'
-    bs_key = 'PXXrqBWk5UA82gpRWpz3'
-    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
-    #
-    options = Options()
-    bstack_options = {
-        'os': 'OS X',
-        'osVersion': 'Monterey',
-        'browserName': 'Chrome',
-        'sessionName': scenario_name
-    }
-    options.set_capability('bstack:options', bstack_options)
-    context.driver = webdriver.Remote(command_executor=url, options=options)
+    # bs_user = 'keithsmith_8yvEsH'
+    # bs_key = 'PXXrqBWk5UA82gpRWpz3'
+    # url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    # #
+    # options = Options()
+    # bstack_options = {
+    #     'os': 'OS X',
+    #     'osVersion': 'Monterey',
+    #     'browserName': 'Chrome',
+    #     'sessionName': scenario_name
+    # }
+    # options.set_capability('bstack:options', bstack_options)
+    # context.driver = webdriver.Remote(command_executor=url, options=options)
 
     context.driver.wait = WebDriverWait(context.driver, 15)
     context.driver.maximize_window()
